@@ -20,7 +20,12 @@ import { CHAT_API_URL } from "./utils/constants";
 export default function App() {
 
 	const [userQuery, setUserQuery] = useState("");
-	const [userQueriesAndAnswers, setUserQueriesAndAnswers] = useState<{ message: string; isUser: boolean }[]>([]);
+	const [userQueriesAndAnswers, setUserQueriesAndAnswers] = useState<{ message: string; isUser: boolean }[]>([
+		{
+			message: `Hello, How can I help you today?`,
+			isUser: false
+		}
+	]);
 
 	const onSendButtonClicked = () => {
 		let newUserQueriesAndAnswers = userQueriesAndAnswers;
@@ -68,7 +73,7 @@ export default function App() {
 	}
 
 	return (
-		<MDBContainer fluid className="py-5" style={{ backgroundColor: "#eee" }}>
+		<MDBContainer fluid className="py-5">
 			<MDBRow className="d-flex justify-content-center">
 				<MDBCol md="8" lg="6" xl="4">
 					<MDBCard>
@@ -76,7 +81,7 @@ export default function App() {
 							className="d-flex justify-content-between align-items-center p-3"
 							style={{ borderTop: "4px solid #ffa900" }}
 						>
-							<h5 className="mb-0">Chat messages</h5>
+							<h5 className="mb-0">Mindler Chatbot</h5>
 							<div className="d-flex flex-row align-items-center">
 
 							</div>
