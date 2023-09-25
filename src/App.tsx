@@ -100,7 +100,7 @@ export default function App() {
 											<div key={`index_${index}`}>
 												{
 													queryAndAnswer.isUser ?
-														<div className="d-flex flex-row justify-content-start">
+														<div className="d-flex flex-row justify-content-end">
 															<img
 																src="https://t4.ftcdn.net/jpg/01/97/15/87/360_F_197158744_1NBB1dEAHV2j9xETSUClYqZo7SEadToU.jpg"
 																alt="avatar 1"
@@ -117,7 +117,7 @@ export default function App() {
 																</p>
 															</div>
 														</div> :
-														<div className="d-flex flex-row justify-content-end mb-4 pt-1">
+														<div className="d-flex flex-row justify-content-start mb-4 pt-1">
 															<div>
 																<p className="small p-2 me-3 mb-3 text-white rounded-3 bg-warning">
 																	{
