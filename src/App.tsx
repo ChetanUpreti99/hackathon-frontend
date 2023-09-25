@@ -85,7 +85,7 @@ export default function App() {
 							className="d-flex justify-content-between align-items-center p-3"
 							style={{ borderTop: "4px solid #ffa900" }}
 						>
-							<h5 className="mb-0">Mindler Chatbot</h5>
+							<h5 className="mb-0">Navigator Chatbot</h5>
 							<div className="d-flex flex-row align-items-center">
 
 							</div>
@@ -102,7 +102,7 @@ export default function App() {
 													queryAndAnswer.isUser ?
 														<div className="d-flex flex-row justify-content-start">
 															<img
-																src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp"
+																src="https://t4.ftcdn.net/jpg/01/97/15/87/360_F_197158744_1NBB1dEAHV2j9xETSUClYqZo7SEadToU.jpg"
 																alt="avatar 1"
 																style={{ width: "45px", height: "100%" }}
 															/>
@@ -127,7 +127,7 @@ export default function App() {
 
 															</div>
 															<img
-																src="https://mindlerimages.imgix.net/mip-web/mindler-navigate.ico"
+																src="https://media.istockphoto.com/id/1010001882/vector/%C3%B0%C3%B0%C2%B5%C3%B1%C3%B0%C3%B1%C3%B1.jpg?s=612x612&w=0&k=20&c=1jeAr9KSx3sG7SKxUPR_j8WPSZq_NIKL0P-MA4F1xRw="
 																alt="avatar 1"
 																style={{ width: "45px", height: "100%" }}
 															/>
