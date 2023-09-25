@@ -118,6 +118,11 @@ export default function App() {
 															</div>
 														</div> :
 														<div className="d-flex flex-row justify-content-start mb-4 pt-1">
+															<img
+																src="https://media.istockphoto.com/id/1010001882/vector/%C3%B0%C3%B0%C2%B5%C3%B1%C3%B0%C3%B1%C3%B1.jpg?s=612x612&w=0&k=20&c=1jeAr9KSx3sG7SKxUPR_j8WPSZq_NIKL0P-MA4F1xRw="
+																alt="avatar 1"
+																style={{ width: "45px", height: "100%" }}
+															/>
 															<div>
 																<p className="small p-2 me-3 mb-3 text-white rounded-3 bg-warning">
 																	{
@@ -126,11 +131,7 @@ export default function App() {
 																</p>
 
 															</div>
-															<img
-																src="https://media.istockphoto.com/id/1010001882/vector/%C3%B0%C3%B0%C2%B5%C3%B1%C3%B0%C3%B1%C3%B1.jpg?s=612x612&w=0&k=20&c=1jeAr9KSx3sG7SKxUPR_j8WPSZq_NIKL0P-MA4F1xRw="
-																alt="avatar 1"
-																style={{ width: "45px", height: "100%" }}
-															/>
+
 														</div>
 												}
 
