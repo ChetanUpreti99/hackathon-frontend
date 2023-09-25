@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import {
+	MDBSpinner,
 	MDBContainer,
 	MDBRow,
 	MDBCol,
@@ -20,6 +21,7 @@ import { CHAT_API_URL } from "./utils/constants";
 export default function App() {
 
 	const [userQuery, setUserQuery] = useState("");
+	const [isLoading, setIsLoading] = useState(false);
 	const [userQueriesAndAnswers, setUserQueriesAndAnswers] = useState<{ message: string; isUser: boolean }[]>([
 		{
 			message: `Hello, How can I help you today?`,
@@ -39,6 +41,7 @@ export default function App() {
 
 	const handleKeyDown = (event: any) => {
 		if (event.key === 'Enter') {
+			setIsLoading(true);
 			onSendButtonClicked();
 		}
 	}
@@ -70,6 +73,7 @@ export default function App() {
 			})
 			setUserQueriesAndAnswers([...userQueriesAndAnswers, ...newQueryReply]);
 		}
+		setIsLoading(false);
 	}
 
 	return (
@@ -148,14 +152,26 @@ export default function App() {
 									}} value={userQuery}
 									onKeyDown={handleKeyDown}
 								/>
-								<MDBBtn color="warning" style={{ paddingTop: ".55rem" }} onClick={onSendButtonClicked}>
-									Button
-								</MDBBtn>
+								{!isLoading ? (
+									<MDBBtn color="warning" style={{ paddingTop: ".55rem" }} onClick={onSendButtonClicked}>
+										Send
+									</MDBBtn>
+								) : (
+									null
+								)}
 							</MDBInputGroup>
+							{isLoading ? (
+								<MDBSpinner role='status'>
+									<span className='visually-hidden'>Loading...</span>
+								</MDBSpinner>
+							) : (
+								null
+							)}
 						</MDBCardFooter>
 					</MDBCard>
 				</MDBCol>
 			</MDBRow>
 		</MDBContainer>
+
 	);
 }
